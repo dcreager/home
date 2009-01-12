@@ -7,7 +7,7 @@ userhost="${pbold}${pgreen}\\u@\\h${preset}"
 current_path="${pbold}${pblue}\\W${preset}"
 git_branch=$(__git_ps1 " ${pblue}(%s)${preset}")
 
-PS1="${userhost}:${current_path}${git_branch}"
+PS1="${userhost}:${current_path}${git_branch}\$ "
 
 # optional prefixes to the basic prompt
 [ -n "$prompt_prefix" ]     && PS1="${prompt_prefix} ${PS1}"
