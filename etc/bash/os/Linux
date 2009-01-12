@@ -1,0 +1,12 @@
+# -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+# ~/etc/bash/prompt
+
+# Linux-specific additions
+
+case "$TERM" in
+xterm)
+    TERM=xterm-256color
+    ;;
+*)
+    ;;
+esac
