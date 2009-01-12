@@ -1,8 +1,33 @@
 # -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 # ~/etc/bash/early/path
-#
+
+# Add a directory to the PATH, but only if it's not already there.
+
+pathmunge () {
+    if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
+        if [ "$2" = "after" ] ; then
+            PATH=$PATH:$1
+        else
+            PATH=$1:$PATH
+        fi
+    fi
+}
+
+# Remove a directory from the PATH.
+
+rmpath () {
+    PATH=`perl -e '
+        my $pathToRemove = $ARGV[0];
+
+        my @paths = split ":", $ENV{PATH};
+        my @newPaths = grep { $_ ne $pathToRemove } @paths;
+
+        print join(":", @newPaths);
+        ' "$1"`
+}
+
 # common updates to the default path
 
-[ -x /usr/local/bin ]       && PATH="${PATH}:/usr/local/bin"
-[ -x /usr/local/sbin ]      && PATH="${PATH}:/usr/local/sbin"
-[ -x ${HOME}/bin/ ]         && PATH="${HOME}/bin:${PATH}"
+[ -x /usr/local/bin ]       && pathmunge /usr/local/bin after
+[ -x /usr/local/sbin ]      && pathmunge /usr/local/sbin after
+[ -x ${HOME}/bin/ ]         && pathmunge "${HOME}/bin"
