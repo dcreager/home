@@ -1,0 +1,13 @@
+[user]
+	name = Douglas Creager
+	email = dcreager@abinitio.com
+[color]
+	branch = true
+	diff = true
+	status = true
+[core]
+	excludesfile = /home/dcreager/.gitignore.global
+[merge]
+	summary = true
+[alias]
+	st = status
