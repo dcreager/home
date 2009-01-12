@@ -13,5 +13,5 @@ need lesspipe <<end
     export      LESS='-R';
 end
 need pygmentize <<end
-    export LESSCOLORIZER='pygmentize';
+    export LESSCOLORIZER='less-pygmentize';
 end
