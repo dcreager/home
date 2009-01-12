@@ -8,8 +8,8 @@ export  PAGER='less'
 export  LESSHISTFILE="${HOME}/var/less_history"
 
 # add colour highlighting where possible
-need lesspipe.sh <<end
-    export  LESSOPEN='| lesspipe.sh %s';
+need lesspipe <<end
+    export  LESSOPEN='| lesspipe %s';
     export      LESS='-R';
 end
 need pygmentize <<end
