@@ -2,6 +2,7 @@
 .Trash
 .ssh
 .MacOSX
+.Xauthority
 
 var/
 tmp/
