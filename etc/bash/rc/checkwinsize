@@ -1,0 +1,7 @@
+# -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+# ~/etc/bash/rc/checkwinsize
+
+# Check the window size after each command and, if necessary, update
+# the values of LINES and COLUMNS.
+
+shopt -s checkwinsize
