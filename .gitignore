@@ -3,6 +3,7 @@
 .ssh
 .MacOSX
 .Xauthority
+.sudo_as_admin_successful
 
 var/
 tmp/
