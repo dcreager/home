@@ -1,0 +1,13 @@
+# -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+# ~/etc/bash/prompt
+# 
+# set the prompt (should be done as late as possible)
+
+userhost="${pbold}${pgreen}\\u@\\h${preset}"
+current_path="${pbold}${pblue}\\W${preset}"
+git_branch=$(__git_ps1 " ${pblue}(%s)${preset}")
+
+PS1="${userhost}:${current_path}${git_branch}"
+
+# optional prefixes to the basic prompt
+[ -n "$prompt_prefix" ]     && PS1="${prompt_prefix} ${PS1}"

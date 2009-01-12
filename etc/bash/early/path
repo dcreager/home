@@ -1,0 +1,8 @@
+# -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+# ~/etc/bash/early/path
+#
+# common updates to the default path
+
+[ -x /usr/local/bin ]       && PATH="${PATH}:/usr/local/bin"
+[ -x /usr/local/sbin ]      && PATH="${PATH}:/usr/local/sbin"
+[ -x ${HOME}/bin/ ]         && PATH="${HOME}/bin:${PATH}"
