@@ -6,7 +6,10 @@
 	diff = true
 	status = true
 [core]
-	excludesfile = /home/dcreager/.gitignore.global
+	# excludesfile will be set by the bash startup scripts so that
+	# $HOME gets filled in correctly.  (Specifically, it happens in
+	# ~/etc/bash/rc/git)
+	excludesfile =  ***DERIVED!***
 	pager = less -FRSX
 [merge]
 	summary = true

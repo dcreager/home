@@ -1,0 +1,21 @@
+# -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+# ~/etc/bash/rc/git
+
+
+# Some of the entries in .gitconfig need to be calculated here.  That
+# means we can't store .gitconfig itself in the repository; otherwise
+# we'd get spurious complaints from git-status all the time.  So,
+# instead, we put all of the static options in ~/.gitconfig.in, and
+# store this in the repository.  This script copies this file to
+# ~/.gitconfig on every login, and then adds all of the calculated
+# values.  ~/.gitconfig is ignored by git, so it's never checked in
+# and never mentioned by git-status.
+
+cp ~/.gitconfig.in ~/.gitconfig
+
+
+# core.excludesfile needs to get set here because it depends on $HOME,
+# which can be different on different machines.  And it seems that the
+# config file cannot contain parameter references.
+
+git config --global core.excludesfile "$HOME/.gitignore.global"

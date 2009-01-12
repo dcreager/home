@@ -5,6 +5,9 @@
 .Xauthority
 .sudo_as_admin_successful
 
+# This is now auto-generated from .gitconfig.in by ~/etc/bash/rc/git
+.gitconfig
+
 var/
 tmp/
 
