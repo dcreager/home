@@ -15,7 +15,7 @@ interactive=1
 
 
 # early - functions could be required at any time, so are included first
-for rc_file in $( echo ~/etc/bash/early/* )
+for rc_file in $( echo ~/etc/bash/early/*[^~] )
 do
     source $rc_file
 done
@@ -32,7 +32,7 @@ source_if_exists ~/etc/bash/host/${hostname}
 
 
 # most common bash settings kept in separate rc files
-for rc_file in $( echo ~/etc/bash/rc/* )
+for rc_file in $( echo ~/etc/bash/rc/*[^~] )
 do
     source $rc_file
 done
