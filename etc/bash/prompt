@@ -11,3 +11,12 @@ PS1="${userhost}:${current_path}${git_branch}\$ "
 
 # optional prefixes to the basic prompt
 [ -n "$prompt_prefix" ]     && PS1="${prompt_prefix} ${PS1}"
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+    ;;
+*)
+    ;;
+esac
