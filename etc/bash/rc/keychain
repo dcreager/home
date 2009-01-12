@@ -1,0 +1,13 @@
+# -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+# ~/etc/bash/rc/keychain
+
+# Load keychain to manage SSH keys
+
+need keychain <<EOF
+    keychain --dir $HOME/var --host $HOSTNAME;
+    if [ -f $HOME/var/.keychain/$HOSTNAME-sh ]; then
+        source $HOME/var/.keychain/$HOSTNAME-sh;
+    fi;
+
+    alias keys='keychain id_rsa dc-id_rsa'
+EOF
