@@ -15,3 +15,6 @@
 	summary = true
 [alias]
 	st = status
+	co = checkout
+	di = diff
+	dc = diff --cached
