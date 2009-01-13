@@ -4,13 +4,13 @@
 # perform actions if a needed program is in the $PATH, 
 # echoing a warning if it doesn't exist
 
-function need {
+need () {
     local file=${1}
-    local have=0
+    local have_it=0
 
-    type $1 &> /dev/null    && have=1
+    type $1 &> /dev/null    && have_it=1
 
-    if [ 0 = ${have} ]; then
+    if [ 0 = ${have_it} ]; then
         eecho "${bold}${red}${file} is not installed${reset}"
     else
         # perform what was passed as stdin (BEWARE: this is not quite normal
@@ -18,14 +18,14 @@ function need {
         eval `cat`
     fi
 
-    return ${have}
+    return ${have_it}
 }
 
-function have {
+have_program () {
     local file=${1}
-    local have=0
+    local have_it=0
 
-    type $1 &> /dev/null    && have=1
+    type $1 &> /dev/null    && have_it=1
 
-    return ${have}
+    return ${have_it}
 }

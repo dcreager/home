@@ -14,7 +14,7 @@ export  LESS='-R'
 # Prefer Debian/Ubuntu's lesspipe, if it's installed.  Otherwise, fall
 # back on the copy we've include in $HOME/bin.
 
-if have lesspipe; then
+if have_program lesspipe; then
     export  LESSOPEN='| lesspipe %s'
 else
     export  LESSOPEN='| $HOME/bin/lesspipe %s'
