@@ -11,7 +11,7 @@ function diff_or_warn {
     diff ${file_a} ${file_b} &> /dev/null
     
     if [ 0 = $? ]; then
-        print "${bold}${red}${warning}${reset}"
+        eecho "${bold}${red}${warning}${reset}"
     fi
 }
 
@@ -23,6 +23,6 @@ function diff_and_warn {
     diff ${file_a} ${file_b} &> /dev/null
     
     if [ 1 = $? ]; then
-        print "${bold}${red}${warning}${reset}"
+        eecho "${bold}${red}${warning}${reset}"
     fi
 }

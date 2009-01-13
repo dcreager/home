@@ -3,4 +3,4 @@
 #
 # echo output, allowing raw characters (ansi colour codes)
 
-alias   print='echo -e'
+alias   eecho='echo -e'
