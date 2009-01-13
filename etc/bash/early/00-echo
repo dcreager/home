@@ -1,6 +1,9 @@
 # -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 # ~/etc/bash/early/00-echo
-#
-# echo output, allowing raw characters (ansi colour codes)
 
-alias   eecho='echo -e'
+# echo output, allowing raw characters (ansi colour codes), but only
+# in interactive mode
+
+eecho () {
+    [ 1 = ${interactive} ] && echo -e "$@"
+}
