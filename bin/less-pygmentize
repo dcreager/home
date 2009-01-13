@@ -8,7 +8,7 @@ case "$1" in
     *.ad[asb]|*.asm|*.inc|*.[ch]|*.[ch]pp|*.[ch]xx|*.cc|*.hh|\
     *.lsp|*.l|*.pas|*.p|*.xml|*.xps|*.xsl|*.axp|*.ppd|*.pov|\
     *.diff|*.patch|*.py|*.rb|*.sql|*.ebuild|*.eclass)
-	pygmentize "$1"; exit 0;;
+        pygmentize "$1"; exit 0;;
 esac
 
 case `file --mime-type --brief --dereference --uncompress "$1"` in

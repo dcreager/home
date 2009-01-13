@@ -9,7 +9,7 @@ function need {
     local have=0
 
     type $1 &> /dev/null    && have=1
-    
+
     if [ 0 = ${have} ]; then
         [ 1 = ${interactive} ] && \
 	    eecho "${bold}${red}${file} is not installed${reset}"
@@ -18,6 +18,15 @@ function need {
         # bash syntax, so semi-colons are almost certainly required)
         eval `cat`
     fi
-    
+
+    return ${have}
+}
+
+function have {
+    local file=${1}
+    local have=0
+
+    type $1 &> /dev/null    && have=1
+
     return ${have}
 }
