@@ -5,7 +5,7 @@
 
 userhost="${pbold}${pgreen}\\u@\\h${preset}"
 current_path="${pbold}${pblue}\\W${preset}"
-git_branch='$(__git_ps1 " ${blue}(%s)${reset}")'
+git_branch='$(__git_ps1 " '"${pblue}"'(%s)'"${preset}"'")'
 
 PS1="${userhost}:${current_path}${git_branch}\$ "
 
