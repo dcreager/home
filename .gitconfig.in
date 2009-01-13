@@ -1,20 +1,20 @@
+# The configuration options listed as "DYNAMIC" are set dynamically by
+# the bash startup scripts.  (Specifically, in ~/etc/bash/rc/git)
+
 [user]
-	name = Douglas Creager
-	email = dcreager@alum.mit.edu
+        name = Douglas Creager
+        email = ${default_git_email}                    # DYNAMIC
 [color]
-	branch = true
-	diff = true
-	status = true
+        branch = true
+        diff = true
+        status = true
 [core]
-	# excludesfile will be set by the bash startup scripts so that
-	# $HOME gets filled in correctly.  (Specifically, it happens in
-	# ~/etc/bash/rc/git)
-	excludesfile =  ***DERIVED!***
-	pager = less -FRSX
+        excludesfile = $HOME/.gitignore.global          # DYNAMIC
+        pager = less -FRSX
 [merge]
-	summary = true
+        summary = true
 [alias]
-	st = status
-	co = checkout
-	di = diff
-	dc = diff --cached
+        st = status
+        co = checkout
+        di = diff
+        dc = diff --cached

@@ -2,6 +2,12 @@
 # ~/etc/bash/rc/git
 
 
+# Set a default value for user.email if no previous setup script
+# provided it.
+
+[ -z ${default_git_email} ] && default_git_email=dcreager@alum.mit.edu
+
+
 # Some of the entries in .gitconfig need to be calculated here.  That
 # means we can't store .gitconfig itself in the repository; otherwise
 # we'd get spurious complaints from git-status all the time.  So,
@@ -14,8 +20,8 @@
 cp ~/.gitconfig.in ~/.gitconfig
 
 
-# core.excludesfile needs to get set here because it depends on $HOME,
-# which can be different on different machines.  And it seems that the
-# config file cannot contain parameter references.
+# Set the configuration variables that depend on environment
+# variables.
 
+git config --global user.email "${default_git_email}"
 git config --global core.excludesfile "$HOME/.gitignore.global"
