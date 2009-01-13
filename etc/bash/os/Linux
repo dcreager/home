@@ -15,3 +15,7 @@ esac
 
 eval "`dircolors -b`"
 alias ls='ls --color=auto'
+
+# Bash completion
+
+[ -f /etc/bash_completion ] && . /etc/bash_completion
