@@ -11,7 +11,7 @@ function need {
     type $1 &> /dev/null    && have=1
     
     if [ 0 = ${have} ]; then
-        [ ${interactive} ] && \
+        [ 1 = ${interactive} ] && \
 	    eecho "${bold}${red}${file} is not installed${reset}"
     else
         # perform what was passed as stdin (BEWARE: this is not quite normal
