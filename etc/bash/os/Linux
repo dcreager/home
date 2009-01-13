@@ -10,3 +10,8 @@ xterm)
 *)
     ;;
 esac
+
+# Colorized ls output
+
+eval "`dircolors -b`"
+alias ls='ls --color=auto'

@@ -4,3 +4,7 @@
 # Mac OS X-specific additions
 
 . /sw/bin/init.sh
+
+# Colorized ls output
+
+alias ls='ls -G'
