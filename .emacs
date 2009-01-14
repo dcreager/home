@@ -1,4 +1,5 @@
 (setq load-path (cons "~/share/emacs/lib" load-path))
+(setq load-path (cons "~/platforms/all/share/emacs/site-lisp" load-path))
 
 (defun chomp (str) (substring str 0 -1))
 
