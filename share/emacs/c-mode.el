@@ -9,6 +9,20 @@
       '((other . "user")))
 
 
+(defun my-c++-mode-hook ()
+  (c-set-offset 'inline-open 0)
+  (c-set-offset 'label '*)
+  (c-set-offset 'case-label '*)
+  (c-set-offset 'statement-case-intro '*)
+  (c-set-offset 'substatement-open 0)
+  (c-set-offset 'arglist-close 0)
+  (setq c-basic-offset 4)
+  (turn-on-font-lock)
+)
+
+(add-hook 'c++-mode-hook 'my-c++-mode-hook)
+
+
 (defun my-java-mode-hook ()
   (c-set-offset 'inline-open 0)
   (c-set-offset 'label '*)
