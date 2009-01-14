@@ -1,0 +1,11 @@
+# -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+# ~/etc/bash/rc/platform-bin
+
+# If there's a directory for this platform under ~/platforms, then add
+# its bin directory to the PATH.
+
+export PLATFORM_DIR=$HOME/platforms/`uname -s`-`uname -m`
+
+if [ -d $PLATFORM_DIR ]; then
+    pathmunge $PLATFORM_DIR/bin after
+fi
