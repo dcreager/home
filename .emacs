@@ -1,11 +1,13 @@
 (setq load-path (cons "~/share/emacs/lib" load-path))
 
+(defun chomp (str) (substring str 0 -1))
+
 
 ;;; Provide easier access to the HOST and HOSTOS environment variables
 ;;; (which are set by the bash startup scripts).
 
-(setq host (getenv "HOST"))
-(setq host-os (getenv "HOSTOS"))
+(setq host (chomp (shell-command-to-string "hostname -s")))
+(setq host-os (chomp (shell-command-to-string "uname")))
 
 
 ;;; Loads all of the .el files in a directory, if that directory
