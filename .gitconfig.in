@@ -18,3 +18,4 @@
         co = checkout
         di = diff
         dc = diff --cached
+	lg = log --graph --pretty=oneline --abbrev-commit
