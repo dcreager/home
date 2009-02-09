@@ -1,6 +1,6 @@
 (column-number-mode :t)
 (line-number-mode :t)
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 (show-paren-mode :t)
-(setq tab-width 4)
+(setq-default tab-width 4)
 (tool-bar-mode nil)
