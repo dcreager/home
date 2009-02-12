@@ -3,7 +3,20 @@
 
 # Mac OS X-specific additions
 
-. /sw/bin/init.sh
+# . /sw/bin/init.sh
+
+pathmunge /opt/local/sbin
+pathmunge /opt/local/bin
+
+if [ -d /opt/local/libexec/ccache ]; then
+    pathmunge /opt/local/libexec/ccache
+fi
+
+export MANPATH=/opt/local/share/man:$MANPATH
+
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
 
 # Colorized ls output
 
