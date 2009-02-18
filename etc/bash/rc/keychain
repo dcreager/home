@@ -3,11 +3,13 @@
 
 # Load keychain to manage SSH keys
 
-need keychain <<EOF
-    keychain --dir $HOME/var --host $HOSTNAME;
-    if [ -f $HOME/var/.keychain/$HOSTNAME-sh ]; then
-        source $HOME/var/.keychain/$HOSTNAME-sh;
-    fi;
+if need keychain; then
+    keychain --dir $HOME/var --host $HOSTNAME
 
-    alias keys='keychain id_rsa dc-id_rsa'
-EOF
+    if [ -f $HOME/var/.keychain/$HOSTNAME-sh ]; then
+        source $HOME/var/.keychain/$HOSTNAME-sh
+    fi
+
+    KEYS=`find $HOME/.ssh -name '*_rsa' | xargs -L 1 basename | xargs`
+    alias keys='keychain --dir $HOME/var --host $HOSTNAME '"$KEYS"
+fi
