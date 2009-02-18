@@ -6,16 +6,12 @@
 
 need () {
     local file=${1}
-    local have_it=0
+    local have_it=1
 
-    type $1 &> /dev/null    && have_it=1
+    type $1 &> /dev/null    && have_it=0
 
-    if [ 0 = ${have_it} ]; then
+    if [ 1 = ${have_it} ]; then
         eecho "${bold}${red}${file} is not installed${reset}"
-    else
-        # perform what was passed as stdin (BEWARE: this is not quite normal
-        # bash syntax, so semi-colons are almost certainly required)
-        eval `cat`
     fi
 
     return ${have_it}
@@ -23,9 +19,9 @@ need () {
 
 have_program () {
     local file=${1}
-    local have_it=0
+    local have_it=1
 
-    type $1 &> /dev/null    && have_it=1
+    type $1 &> /dev/null    && have_it=0
 
     return ${have_it}
 }

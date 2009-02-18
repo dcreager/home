@@ -20,6 +20,6 @@ else
     export  LESSOPEN='| $HOME/bin/lesspipe %s'
 fi
 
-need pygmentize <<end
-    export LESSCOLORIZER='less-pygmentize';
-end
+if need pygmentize; then
+    export LESSCOLORIZER='less-pygmentize'
+fi
