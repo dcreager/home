@@ -16,6 +16,10 @@ esac
 eval "`dircolors -b`"
 alias ls='ls --color=auto'
 
+# ccache
+
+[ -d /usr/lib/ccache ] && pathmunge /usr/lib/ccache
+
 # Bash completion
 
 [ -f /etc/bash_completion ] && . /etc/bash_completion
