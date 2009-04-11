@@ -20,6 +20,10 @@ alias ls='ls --color=auto'
 
 [ -d /usr/lib/ccache ] && pathmunge /usr/lib/ccache
 
+# Ruby gems
+
+[ -d /var/lib/gems/1.8/bin ] && pathmunge /var/lib/gems/1.8/bin after
+
 # Bash completion
 
 [ -f /etc/bash_completion ] && . /etc/bash_completion
