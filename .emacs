@@ -20,12 +20,20 @@
 	(load file))))
 
 
-;;; Look for OS-specific and host-specific directories of .el files
+;;; Look for "pre" OS-specific and host-specific directories of .el
+;;; files
 
-(load-files-in-directory (concat "~/share/emacs/os/" host-os))
-(load-files-in-directory (concat "~/share/emacs/host/" host))
+(load-files-in-directory (concat "~/share/emacs/os/" host-os "/pre"))
+(load-files-in-directory (concat "~/share/emacs/host/" host "/pre"))
 
 
 ;;; And then load the .el files in the always-loaded directory
 
 (load-files-in-directory "~/share/emacs")
+
+
+;;; Look for "post" OS-specific and host-specific directories of .el
+;;; files
+
+(load-files-in-directory (concat "~/share/emacs/os/" host-os "/post"))
+(load-files-in-directory (concat "~/share/emacs/host/" host "/post"))
