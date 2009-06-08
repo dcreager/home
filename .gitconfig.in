@@ -13,6 +13,8 @@
         pager = less -FRSX
 [merge]
         summary = true
+[push]
+        default = matching
 [alias]
         st = status
         co = checkout
