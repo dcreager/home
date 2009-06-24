@@ -1,4 +1,5 @@
 (require 'timeclock)
+(setq timeclock-file (convert-standard-filename "~/private/timelog"))
 (define-key ctl-x-map "ti" 'timeclock-in)
 (define-key ctl-x-map "to" 'timeclock-out)
 (define-key ctl-x-map "tc" 'timeclock-change)
