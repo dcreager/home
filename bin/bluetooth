@@ -1,0 +1,19 @@
+#!/bin/bash
+
+case "$1" in
+    up)
+        echo "Turning on Bluetooth..."
+        sudo modprobe btusb
+        sudo /etc/init.d/bluetooth start
+        ;;
+
+    down)
+        echo "Turning off Bluetooth..."
+        sudo /etc/init.d/bluetooth stop
+        sudo rmmod btusb
+        ;;
+
+    *)
+        echo "Unknown option $1."
+        ;;
+esac

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case "$1" in
+    up)
+        echo "Turning on WiFi..."
+        sudo modprobe wl
+        ;;
+
+    down)
+        echo "Turning off WiFi..."
+        sudo rmmod wl
+        ;;
+
+    *)
+        echo "Unknown option $1."
+        ;;
+esac
