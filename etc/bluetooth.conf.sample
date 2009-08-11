@@ -1,0 +1,9 @@
+# Personal-like configuration entries go into the bluetooth.conf file.
+# That file isn't checked into git, so nothing personal-like goes off
+# to Github.  Copy this file to bluetooth.conf, then edit.
+
+# Type in the MAC address of your Bluetooth phone here.  This will be
+# used as the "--connect" address when we run pand to start the
+# network connection.
+
+PAND_ADDRESS="00:11:22:33:44:55"

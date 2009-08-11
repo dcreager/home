@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# Written by Douglas Creager <dcreager@dcreager.net>, August 2009.
+# This script is in the public domain.  Do with it what you wish.
+#
+# The commands were obtained from
+# http://xn--9bi.net/2009/06/17/tethering-iphone-3-0-to-ubuntu-9-04/
+
+. $HOME/etc/bluetooth.conf
+
+case "$1" in
+    up)
+        echo "Turning on Bluetooth network tether..."
+        sudo pand --connect "$PAND_ADDRESS" -n
+        sudo ifup bnep0
+        ;;
+
+    down)
+        echo "Turning off Bluetooth network tether..."
+        sudo ifdown bnep0
+	sudo pand -K
+        ;;
+
+    *)
+        echo "Unknown option $1."
+        ;;
+esac
