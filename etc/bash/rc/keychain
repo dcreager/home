@@ -10,6 +10,10 @@ if need keychain; then
         source $HOME/var/.keychain/$HOSTNAME-sh
     fi
 
+    if [ -f $HOME/var/.keychain/$HOSTNAME-sh-gpg ]; then
+        source $HOME/var/.keychain/$HOSTNAME-sh-gpg
+    fi
+
     KEYS=`find $HOME/.ssh -name '*_rsa' | xargs -L 1 basename | xargs`
     alias keys='keychain --dir $HOME/var --host $HOSTNAME '"$KEYS"
 fi
