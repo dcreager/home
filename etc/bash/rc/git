@@ -5,7 +5,7 @@
 # Set a default value for user.email if no previous setup script
 # provided it.
 
-[ -z ${default_git_email} ] && default_git_email=dcreager@alum.mit.edu
+[ -z ${default_git_email} ] && default_git_email=douglas.creager@redjack.com
 
 
 # Some of the entries in .gitconfig need to be calculated here.  That
