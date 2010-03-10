@@ -1,15 +1,24 @@
-.DS_Store
-.Trash
-.MacOSX
-.Xauthority
-.sudo_as_admin_successful
+# You know, it's easier to mark which .files are *not* ignored.
+/.*
+!.bash_profile
+!.bashrc
+!.emacs
+!.gitconfig.in
+!.gitignore
+!.gitignore.global
+!.lessfilter
+!.ssh/
+!.vimrc
 
-# This is now auto-generated from .gitconfig.in by ~/etc/bash/rc/git
-.gitconfig
+# This is auto-generated from .gitconfig.in by ~/etc/bash/rc/git.
+# (Don't have to actually include it in the list, though, since we
+# ignore all .files by default.)
+# .gitconfig
 
 var/
 tmp/
 private/
+pwsafe/
 
 Applications/
 Desktop/
@@ -22,5 +31,10 @@ Pictures/
 Public/
 Sites/
 
+deb/
+env/
 git/
+hg/
 svn/
+
+*.gpg
