@@ -7,7 +7,16 @@ userhost="${pbold}${pgreen}\\u@\\h${preset}"
 current_path="${pbold}${pblue}\\W${preset}"
 git_branch='$(__git_ps1 " '"${pblue}"'(%s)'"${preset}"'")'
 
-PS1="${userhost}:${current_path}${git_branch}\$ "
+virtualenv_prompt () {
+    if [ -n "$VIRTUAL_ENV" ]; then
+        printf "$1" $(basename $VIRTUAL_ENV)
+    fi
+}
+
+virtualenv='$(virtualenv_prompt " '"${pred}"'%s'"${preset}"'")'
+
+VIRTUAL_ENV_DISABLE_PROMPT=1
+PS1="${userhost}:${current_path}${virtualenv}${git_branch}\$ "
 
 # optional prefixes to the basic prompt
 [ -n "$prompt_prefix" ]     && PS1="${prompt_prefix} ${PS1}"
