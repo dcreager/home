@@ -10,6 +10,8 @@
 
 
 (defun my-c++-mode-hook ()
+  (c-set-offset 'innamespace 0)
+  (c-set-offset 'inextern-lang 0)
   (c-set-offset 'inline-open 0)
   (c-set-offset 'label '*)
   (c-set-offset 'case-label '*)
