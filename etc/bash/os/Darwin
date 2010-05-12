@@ -3,19 +3,14 @@
 
 # Mac OS X-specific additions
 
-# . /sw/bin/init.sh
+export PYTHONPATH=/usr/local/lib/python2.6/site-packages
 
-pathmunge /opt/local/sbin
-pathmunge /opt/local/bin
-
-if [ -d /opt/local/libexec/ccache ]; then
-    pathmunge /opt/local/libexec/ccache
+if [ -d `brew --prefix`/Cellar/ccache/2.4/libexec/ccache ]; then
+    pathmunge `brew --prefix`/Cellar/ccache/2.4/libexec/ccache
 fi
 
-export MANPATH=/opt/local/share/man:$MANPATH
-
-if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
 fi
 
 # Colorized ls output
