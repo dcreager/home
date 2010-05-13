@@ -5,7 +5,9 @@
 
 userhost="${pbold}${pgreen}\\u@\\h${preset}"
 current_path="${pbold}${pblue}\\W${preset}"
-git_branch='$(__git_ps1 " '"${pblue}"'(%s)'"${preset}"'")'
+
+# Don't include git or virtualenv info on the PowerPC VM, because
+# it's slooooow.
 
 virtualenv_prompt () {
     if [ -n "$VIRTUAL_ENV" ]; then
@@ -13,7 +15,13 @@ virtualenv_prompt () {
     fi
 }
 
-virtualenv='$(virtualenv_prompt " '"${pred}"'%s'"${preset}"'")'
+if [ $(uname -m) == "ppc" ]; then
+    git_branch=''
+    virtualenv=''
+else
+    git_branch='$(__git_ps1 " '"${pblue}"'(%s)'"${preset}"'")'
+    virtualenv='$(virtualenv_prompt " '"${pred}"'%s'"${preset}"'")'
+fi
 
 VIRTUAL_ENV_DISABLE_PROMPT=1
 PS1="${userhost}:${current_path}${virtualenv}${git_branch}\$ "
