@@ -5,8 +5,8 @@
 
 export PYTHONPATH=/usr/local/lib/python2.6/site-packages
 
-if [ -d `brew --prefix`/Cellar/ccache/2.4/libexec/ccache ]; then
-    pathmunge `brew --prefix`/Cellar/ccache/2.4/libexec/ccache
+if [ -d `brew --prefix`/Cellar/ccache/2.4/libexec ]; then
+    pathmunge `brew --prefix`/Cellar/ccache/2.4/libexec
 fi
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
