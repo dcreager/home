@@ -26,8 +26,13 @@ rmpath () {
         ' "$1"`
 }
 
+# remove these first to ensure they're at the beginning
+
+rmpath /usr/local/bin
+rmpath /usr/local/sbin
+
 # common updates to the default path
 
-[ -x /usr/local/bin ]       && pathmunge /usr/local/bin after
-[ -x /usr/local/sbin ]      && pathmunge /usr/local/sbin after
+[ -x /usr/local/bin ]       && pathmunge /usr/local/bin 
+[ -x /usr/local/sbin ]      && pathmunge /usr/local/sbin
 [ -x ${HOME}/bin/ ]         && pathmunge "${HOME}/bin"
