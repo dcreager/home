@@ -18,6 +18,13 @@ fi
 
 export HOMEBREW_USE_LLVM=1
 
+# Go support
+
+export GOROOT=`brew --cellar`/go/HEAD
+export GOBIN=/usr/local/bin
+export GOARCH=amd64
+export GOOS=darwin
+
 # Colorized ls output
 
 alias ls='ls -G'
