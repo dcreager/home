@@ -3,7 +3,10 @@
 
 # Mac OS X-specific additions
 
-export PYTHONPATH=/usr/local/lib/python2.6/site-packages
+if [ -d `brew --prefix`/lib/python2.7 ]; then
+    export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+    pathmunge `brew --prefix`/Cellar/python/2.7/bin
+fi
 
 if [ -d `brew --prefix`/Cellar/ccache/2.4/libexec ]; then
     pathmunge `brew --prefix`/Cellar/ccache/2.4/libexec
