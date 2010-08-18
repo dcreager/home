@@ -3,4 +3,4 @@
 (setq-default indent-tabs-mode nil)
 (show-paren-mode :t)
 (setq-default tab-width 4)
-(tool-bar-mode nil)
+(tool-bar-mode 0)
