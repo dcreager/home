@@ -8,12 +8,20 @@ if [ -d `brew --prefix`/lib/python2.7 ]; then
     pathmunge `brew --prefix`/Cellar/python/2.7/bin
 fi
 
+if [ -d `brew --prefix`/Cellar/ruby ]; then
+    export GEM_HOME=$(brew --prefix)/Cellar/gems/1.8
+fi
+
 if [ -d `brew --prefix`/Cellar/ccache/2.4/libexec ]; then
     pathmunge `brew --prefix`/Cellar/ccache/2.4/libexec
 fi
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
+fi
+
+if [ -f `brew --prefix`/Cellar/python/2.7/bin/virtualenvwrapper.sh ]; then
+    . `brew --prefix`/Cellar/python/2.7/bin/virtualenvwrapper.sh
 fi
 
 if [ -d /usr/texbin ]; then
