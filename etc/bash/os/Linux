@@ -27,7 +27,12 @@ alias ls='ls --color=auto'
 # Bash completion
 
 # Don't turn on Bash completion on the PowerPC VM, since it's sloooow.
+# Also don't turn it on if the package manager has already done so.
 
-if [ $(uname -m) != "ppc" ]; then
-    [ -f /etc/bash_completion ] && . /etc/bash_completion
+if [ -z "$BASH_COMPLETION" ]; then
+    if [ $(uname -m) != "ppc" ]; then
+        echo "1"
+        [ -f /etc/bash_completion ] && . /etc/bash_completion
+        echo "2"
+    fi
 fi
