@@ -31,9 +31,3 @@ alias ls='ls --color=auto'
 if [ $(uname -m) != "ppc" ]; then
     [ -f /etc/bash_completion ] && . /etc/bash_completion
 fi
-
-# Virtualenv support
-
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    . /usr/local/bin/virtualenvwrapper.sh
-fi

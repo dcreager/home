@@ -20,10 +20,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-if [ -f `brew --prefix`/Cellar/python/2.7/bin/virtualenvwrapper.sh ]; then
-    . `brew --prefix`/Cellar/python/2.7/bin/virtualenvwrapper.sh
-fi
-
 if [ -d /usr/texbin ]; then
     pathmunge /usr/texbin after
 fi
