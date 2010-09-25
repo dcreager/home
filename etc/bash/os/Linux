@@ -31,8 +31,6 @@ alias ls='ls --color=auto'
 
 if [ -z "$BASH_COMPLETION" ]; then
     if [ $(uname -m) != "ppc" ]; then
-        echo "1"
         [ -f /etc/bash_completion ] && . /etc/bash_completion
-        echo "2"
     fi
 fi
