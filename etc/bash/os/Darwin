@@ -16,6 +16,10 @@ if [ -d `brew --prefix`/Cellar/ccache/3.1/libexec ]; then
     pathmunge `brew --prefix`/Cellar/ccache/3.1/libexec
 fi
 
+if [ -d `brew --prefix`/lib/luarocks/bin ]; then
+    pathmunge `brew --prefix`/lib/luarocks/bin
+fi
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
