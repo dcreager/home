@@ -9,3 +9,4 @@ set guifont=Menlo:h12
 set lines=50
 colorscheme zenburn
 set tw=72
+set fuopt=maxvert,maxhorz
