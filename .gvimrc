@@ -11,3 +11,4 @@ colorscheme zenburn
 set tw=72
 set fuopt=maxvert,maxhorz
 set hidden
+nmap _ :ls<CR>:b<Space>
