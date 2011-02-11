@@ -5,15 +5,15 @@
 
 if [ -d `brew --prefix`/lib/python2.7 ]; then
     export PYTHONPATH=/usr/local/lib/python2.7/site-packages
-    pathmunge `brew --prefix`/Cellar/python/2.7/bin
+    pathmunge `brew --prefix`/Cellar/python/2.7.1/bin
 fi
 
 if [ -d `brew --prefix`/Cellar/ruby ]; then
     export GEM_HOME=$(brew --prefix)/Cellar/gems/1.8
 fi
 
-if [ -d `brew --prefix`/Cellar/ccache/3.1/libexec ]; then
-    pathmunge `brew --prefix`/Cellar/ccache/3.1/libexec
+if [ -d `brew --prefix`/Cellar/ccache/3.1.4/libexec ]; then
+    pathmunge `brew --prefix`/Cellar/ccache/3.1.4/libexec
 fi
 
 if [ -d `brew --prefix`/lib/luarocks/bin ]; then
