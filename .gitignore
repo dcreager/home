@@ -8,9 +8,9 @@
 !.gitignore.global
 !.lessfilter
 !.ssh/
-!.vimrc
-!.gvimrc
-!.vim/
+!.vimrc.local
+!.gvimrc.local
+!.vim
 
 # This is auto-generated from .gitconfig.in by ~/etc/bash/rc/git.
 # (Don't have to actually include it in the list, though, since we

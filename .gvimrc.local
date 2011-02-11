@@ -1,0 +1,12 @@
+set columns=85
+set lines=50
+color zenburn
+
+if has("gui_macvim")
+  set gcr=n:blinkon0
+  set guifont=Menlo:h12
+  set fuopt=maxvert,maxhorz
+  set columns=115
+
+  map <D-F> :set fu!<CR>
+endif
