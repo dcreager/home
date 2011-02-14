@@ -2,6 +2,8 @@ set columns=85
 set lines=50
 color winter
 
+set keymodel=
+
 if has("gui_macvim")
   set gcr=n:blinkon0
   set guifont=Menlo:h12
