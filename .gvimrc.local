@@ -1,6 +1,6 @@
 set columns=85
 set lines=50
-color zenburn
+color winter
 
 if has("gui_macvim")
   set gcr=n:blinkon0
