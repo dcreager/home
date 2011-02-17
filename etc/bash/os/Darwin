@@ -20,8 +20,17 @@ if [ -d `brew --prefix`/lib/luarocks/bin ]; then
     pathmunge `brew --prefix`/lib/luarocks/bin
 fi
 
+if [ -d `brew --prefix`/Cellar/forrest/0.9 ]; then
+    export FORREST_HOME=`brew --prefix`/Cellar/forrest/0.9
+    pathmunge "$FORREST_HOME"/bin after
+fi
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
+fi
+
+if [ -x /usr/libexec/java_home ]; then
+    export JAVA_HOME=$(/usr/libexec/java_home)
 fi
 
 if [ -d /usr/texbin ]; then
