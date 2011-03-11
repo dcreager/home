@@ -11,15 +11,6 @@ export  LESSHISTFILE="${HOME}/var/less_history"
 
 export  LESS='-R'
 
-# Prefer Debian/Ubuntu's lesspipe, if it's installed.  Otherwise, fall
-# back on the copy we've include in $HOME/bin.
-
-if have_program lesspipe; then
-    export  LESSOPEN='| lesspipe %s'
-else
-    export  LESSOPEN='| $HOME/bin/lesspipe %s'
-fi
-
 if need pygmentize; then
     export LESSCOLORIZER='less-pygmentize'
 fi
