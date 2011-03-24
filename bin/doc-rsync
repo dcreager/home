@@ -1,0 +1,19 @@
+#!/bin/bash
+
+SERVER="zazzle@zazzle-lang.org"
+BASE="docs.zazzle-lang.org"
+
+TOP_LEVEL=$(git rev-parse --show-toplevel)
+PROJECT=$(basename ${TOP_LEVEL})
+VERSION=$(git describe)
+
+if echo $VERSION | grep dev > /dev/null; then
+    VERSION_DIR=develop
+else
+    VERSION_DIR=${VERSION}
+fi
+
+DOC_DIR="${BASE}/${PROJECT}/${VERSION_DIR}/api"
+echo "Making ${DOC_DIR} directory..."
+ssh "${SERVER}" "mkdir -p ${DOC_DIR}"
+rsync -avz ${TOP_LEVEL}/build/docs/html/ "${SERVER}:${DOC_DIR}"
