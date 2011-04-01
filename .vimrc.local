@@ -13,5 +13,5 @@ let macvim_hig_shift_movement = 0
 au FileType c       set formatoptions-=t
 au FileType css     set sw=4 sts=4
 au FileType html    set sw=2 sts=2
-au FileType lua     set formatoptions-=t
+au FileType lua     set formatoptions-=t sw=3 sts=3
 au FileType python  set formatoptions-=t
