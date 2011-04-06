@@ -37,6 +37,11 @@ if [ -d /usr/texbin ]; then
     pathmunge /usr/texbin after
 fi
 
+if [ -d `brew --prefix`/Cellar/autoconf/2.68 ]; then
+    export AUTOCONF=`brew --prefix`/Cellar/autoconf/2.68/bin/autoconf
+    export AUTOM4TE=`brew --prefix`/Cellar/autoconf/2.68/bin/autom4te
+fi
+
 export HOMEBREW_USE_LLVM=1
 export LANG=en_US.UTF-8
 
