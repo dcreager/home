@@ -15,3 +15,5 @@ au FileType css     set sw=4 sts=4
 au FileType html    set sw=2 sts=2
 au FileType lua     set formatoptions-=t sw=3 sts=3
 au FileType python  set formatoptions-=t
+
+au BufRead,BufNewFile PKGBUILD    set ft=sh
