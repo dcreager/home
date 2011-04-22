@@ -35,5 +35,4 @@ rmpath /usr/local/sbin
 
 [ -x /usr/local/bin ]       && pathmunge /usr/local/bin 
 [ -x /usr/local/sbin ]      && pathmunge /usr/local/sbin
-[ -x /opt/redjack/bin ]     && pathmunge /opt/redjack/bin
 [ -x ${HOME}/bin/ ]         && pathmunge "${HOME}/bin"

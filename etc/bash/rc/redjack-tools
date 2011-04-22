@@ -1,0 +1,7 @@
+# -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
+# ~/etc/bash/rc/keychain
+
+if [ -d /opt/redjack ]; then
+    pathmunge /opt/redjack/bin after
+    pathmunge /opt/redjack/sbin after
+fi
