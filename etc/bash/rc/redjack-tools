@@ -2,6 +2,6 @@
 # ~/etc/bash/rc/keychain
 
 if [ -d /opt/redjack ]; then
-    pathmunge /opt/redjack/bin after
-    pathmunge /opt/redjack/sbin after
+    pathmunge /opt/redjack/bin
+    pathmunge /opt/redjack/sbin
 fi
