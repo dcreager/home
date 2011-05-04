@@ -1,7 +1,6 @@
 # -*- Mode: sh; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 2 -*-
 # ~/etc/bash/rc/keychain
 
-if [ -d /opt/redjack ]; then
-    pathmunge /opt/redjack/bin
-    pathmunge /opt/redjack/sbin
+if [ -f /opt/redjack/etc/epkg.conf ]; then
+    source /opt/redjack/etc/epkg.conf
 fi
