@@ -3,4 +3,4 @@
 
 # Use CDPATH to make the cd command more interesting
 
-export CDPATH=.:~/git
+CDPATH=.:~/git
