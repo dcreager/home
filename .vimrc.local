@@ -19,3 +19,4 @@ au FileType lua     set formatoptions-=t sw=3 sts=3
 au FileType python  set formatoptions-=t
 
 au BufRead,BufNewFile PKGBUILD    set ft=sh
+au BufRead,BufNewFile *.do        set ft=sh
