@@ -1,6 +1,9 @@
 set columns=85
 set lines=55
-color zenburn
+syntax enable
+set background=dark
+let g:solarized_visibility="low"
+colorscheme solarized
 
 set keymodel=
 
