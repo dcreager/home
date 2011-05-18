@@ -20,3 +20,5 @@ au FileType python  set formatoptions-=t
 
 au BufRead,BufNewFile PKGBUILD    set ft=sh
 au BufRead,BufNewFile *.do        set ft=sh
+au BufRead,BufNewFile *.rockspec  set ft=lua
+au BufRead,BufNewFile *.wfd       set ft=lua
