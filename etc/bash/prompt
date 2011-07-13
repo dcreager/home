@@ -16,13 +16,8 @@ virtualenv_prompt () {
 }
 
 if __git_ps1 > /dev/null 2> /dev/null; then
-    if [ $(uname -m) == "ppc" ]; then
-        git_branch=''
-        virtualenv=''
-    else
-        git_branch='$(__git_ps1 " '"${pblue}"'(%s)'"${preset}"'")'
-        virtualenv='$(virtualenv_prompt " '"${pred}"'%s'"${preset}"'")'
-    fi
+    git_branch='$(__git_ps1 " '"${pblue}"'(%s)'"${preset}"'")'
+    virtualenv='$(virtualenv_prompt " '"${pred}"'%s'"${preset}"'")'
 fi
 
 VIRTUAL_ENV_DISABLE_PROMPT=1

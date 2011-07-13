@@ -30,7 +30,5 @@ alias ls='ls --color=auto'
 # Also don't turn it on if the package manager has already done so.
 
 if [ -z "$BASH_COMPLETION" ]; then
-    if [ $(uname -m) != "ppc" ]; then
-        [ -f /etc/bash_completion ] && . /etc/bash_completion
-    fi
+    [ -f /etc/bash_completion ] && . /etc/bash_completion
 fi
