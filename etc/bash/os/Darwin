@@ -3,9 +3,8 @@
 
 # Mac OS X-specific additions
 
-if [ -d `brew --prefix`/lib/python2.7 ]; then
-    export PYTHONPATH=/usr/local/lib/python2.7/site-packages
-    pathmunge `brew --prefix`/Cellar/python/2.7.1/bin
+if [ -d `brew --prefix`/share/python ]; then
+    pathmunge `brew --prefix`/share/python
 fi
 
 if [ -d `brew --prefix`/Cellar/ruby ]; then
