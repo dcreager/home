@@ -6,11 +6,12 @@ let g:solarized_visibility="low"
 colorscheme solarized
 
 set keymodel=
+set gcr=n:blinkon0
 
 if has("gui_macvim")
-  set gcr=n:blinkon0
   set guifont=Menlo:h12
   set fuopt=maxvert,maxhorz
-
   map <D-F> :set fu!<CR>
+elseif has("gui_gtk2")
+  set guifont=Menlo\ 10
 endif
