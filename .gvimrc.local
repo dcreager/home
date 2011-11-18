@@ -1,4 +1,4 @@
-set columns=85
+set columns=175
 set lines=55
 syntax enable
 set background=dark
@@ -11,7 +11,6 @@ if has("gui_macvim")
   set gcr=n:blinkon0
   set guifont=Menlo:h12
   set fuopt=maxvert,maxhorz
-  set columns=204
 
   map <D-F> :set fu!<CR>
 endif
