@@ -9,7 +9,7 @@ set keymodel=
 set gcr=n:blinkon0
 
 if has("gui_macvim")
-  set guifont=Menlo:h12
+  set guifont=Menlo:h14
   set fuopt=maxvert,maxhorz
   map <D-F> :set fu!<CR>
 elseif has("gui_gtk2")
