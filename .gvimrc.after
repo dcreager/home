@@ -4,6 +4,7 @@ syntax enable
 set background=dark
 let g:solarized_visibility="low"
 colorscheme solarized
+set guioptions-=T   " no toolbar
 
 set keymodel=
 set gcr=n:blinkon0
