@@ -9,8 +9,10 @@
 !.lessfilter
 !.ssh/
 !.janus
-!.vimrc.local
-!.gvimrc.local
+!.gvimrc.after
+!.gvimrc.before
+!.vimrc.after
+!.vimrc.before
 !.vim
 
 # This is auto-generated from .gitconfig.in by ~/etc/bash/rc/git.
