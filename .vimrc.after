@@ -10,6 +10,8 @@ set tw=72
 
 set list listchars=tab:··,trail:•
 
+set wildignore+=*/.build/*
+
 let macvim_hig_shift_movement = 0
 
 au FileType c       setlocal formatoptions-=t
