@@ -4,3 +4,6 @@
 [submodule ".janus/ctrlp.vim"]
 	path = .janus/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".janus/vim-pasta.git"]
+	path = .janus/vim-pasta.git
+	url = https://github.com/sickill/vim-pasta.git
