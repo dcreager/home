@@ -1,2 +1,1 @@
-call janus#disable_plugin('command-t')
 call janus#disable_plugin('nerdtree')
