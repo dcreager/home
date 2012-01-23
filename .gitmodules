@@ -1,6 +1,3 @@
-[submodule ".vim"]
-	path = .vim
-	url = git://github.com/carlhuda/janus.git
 [submodule ".janus/ctrlp.vim"]
 	path = .janus/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git

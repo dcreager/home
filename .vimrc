@@ -1,3 +1,4 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 set hidden
 map <silent> <C-n> :noh<CR>
 set hls is ic scs
@@ -17,13 +18,6 @@ let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_open_multi = 'vr'
 let g:ctrlp_jump_to_buffer = 2
-
-" Remove some of the annoying bits of the mapping plugin
-nunmap <silent> ,.
-nunmap <silent> ,m
-nunmap <silent> ;'
-nunmap <silent> ;l
-nunmap <silent> <leader>ul
 
 au FileType c       setlocal formatoptions-=t
 au FileType css     setlocal sw=4 sts=4
