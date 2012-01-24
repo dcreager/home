@@ -1,0 +1,3 @@
+BASENAME=solarized
+URL=git://github.com/altercation/vim-colors-solarized.git
+BRANCH=master
