@@ -57,3 +57,7 @@ au BufRead,BufNewFile *.wfd       set ft=lua
 " see :help last-position-jump
 au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g`\"" | endif
+
+set backupdir=~/.vim/_backup/
+set directory=~/.vim/_temp/
+set viminfo='50,\"1000,n~/var/viminfo
