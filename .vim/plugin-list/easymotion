@@ -1,0 +1,3 @@
+BASENAME=easymotion
+URL=git://github.com/Lokaltog/vim-easymotion.git
+BRANCH=master
