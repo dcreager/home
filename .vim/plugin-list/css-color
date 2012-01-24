@@ -1,0 +1,3 @@
+BASENAME=css-color
+URL=git://github.com/ap/vim-css-color.git
+BRANCH=master
