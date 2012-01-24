@@ -9,6 +9,7 @@ nmap <leader>l :set sw=8 sts=8 noet<CR>
 nmap <leader>n :set sw=4 sts=4 et<CR>
 set formatoptions+=n2
 set tw=72
+syntax enable
 
 set list listchars=tab:··,trail:•
 
