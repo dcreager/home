@@ -41,7 +41,6 @@ map <leader>et :tabe %%
 " find merge conflict markers
 nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_open_multi = 'vr'
 let g:ctrlp_jump_to_buffer = 2
