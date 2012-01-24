@@ -1,0 +1,3 @@
+BASENAME=markdown
+URL=git://github.com/tpope/vim-markdown.git
+BRANCH=master
