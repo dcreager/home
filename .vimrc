@@ -5,8 +5,8 @@ set hidden
 map <silent> <C-n> :noh<CR>
 set hls is ic scs
 set ts=8 sw=4 sts=4 et
-nmap <leader>l :set sw=8 sts=8 noet<CR>
-nmap <leader>n :set sw=4 sts=4 et<CR>
+nmap <leader>il :set sw=8 sts=8 noet<CR>
+nmap <leader>in :set sw=4 sts=4 et<CR>
 set formatoptions+=n2
 set tw=72
 syntax enable
