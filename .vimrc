@@ -1,4 +1,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
 set hidden
 map <silent> <C-n> :noh<CR>
 set hls is ic scs
