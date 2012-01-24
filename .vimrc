@@ -31,3 +31,8 @@ au BufRead,BufNewFile PKGBUILD    set ft=sh
 au BufRead,BufNewFile *.do        set ft=sh
 au BufRead,BufNewFile *.rockspec  set ft=lua
 au BufRead,BufNewFile *.wfd       set ft=lua
+
+" Remember last location in file, but not for commit messages.
+" see :help last-position-jump
+au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g`\"" | endif
