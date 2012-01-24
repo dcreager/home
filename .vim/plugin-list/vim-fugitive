@@ -1,0 +1,3 @@
+BASENAME=vim-fugitive
+URL=git://github.com/tpope/vim-fugitive.git
+BRANCH=master
