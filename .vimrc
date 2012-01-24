@@ -12,6 +12,9 @@ set tw=72
 syntax enable
 filetype plugin indent on
 
+set wildmode=longest,list,full
+set wildmenu
+
 set list listchars=tab:··,trail:•
 
 set laststatus=2
