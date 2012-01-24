@@ -29,6 +29,7 @@ au FileType python  setlocal formatoptions-=t
 
 au BufRead,BufNewFile PKGBUILD    set ft=sh
 au BufRead,BufNewFile *.do        set ft=sh
+au BufRead,BufNewFile *.json      set ft=javascript
 au BufRead,BufNewFile *.rockspec  set ft=lua
 au BufRead,BufNewFile *.wfd       set ft=lua
 
