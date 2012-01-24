@@ -1,0 +1,3 @@
+BASENAME=javascript
+URL=git://github.com/pangloss/vim-javascript.git
+BRANCH=master
