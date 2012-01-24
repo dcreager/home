@@ -13,6 +13,7 @@ syntax enable
 
 set list listchars=tab:··,trail:•
 
+set laststatus=2
 set statusline=%f\ %m\ %r%{fugitive#statusline()}\ L%l/%L\ C%v\ [%b][0x%B]
 
 let macvim_hig_shift_movement = 0
