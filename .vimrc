@@ -12,6 +12,8 @@ set tw=72
 syntax enable
 filetype plugin indent on
 
+set wildignore+=*/.build/*
+
 set wildmode=longest,list,full
 set wildmenu
 
