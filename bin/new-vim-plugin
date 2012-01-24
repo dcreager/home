@@ -1,0 +1,35 @@
+#!/bin/bash
+
+URL="$1"
+if [ -z "$URL" ]; then
+    echo "Missing URL"
+    exit 1
+fi
+
+shift
+if [ -n "$1" ]; then
+    BASENAME="$URL"
+    URL="$1"
+fi
+
+: ${BASENAME:=$(basename "$URL" | sed -e 's/\.git//')}
+
+BRANCH="$2"
+: ${BRANCH:=master}
+
+echo "New plugin $BASENAME from $URL:$BRANCH"
+
+mkdir -p "$HOME/.vim/plugin-list"
+cat > "$HOME/.vim/plugin-list/${BASENAME}" <<EOF
+BASENAME=${BASENAME}
+URL=${URL}
+BRANCH=${BRANCH}
+EOF
+
+export GIT_DIR=$HOME/.git
+git remote add "${BASENAME}" "${URL}" -t "${BRANCH}"
+git fetch "${BASENAME}"
+git read-tree --prefix=".vim/bundle/${BASENAME}" -u "${BASENAME}/${BRANCH}"
+git add "$HOME/.vim/plugin-list/${BASENAME}"
+git commit -m "Adding vim plugin ${BASENAME}"
+git merge -s subtree "${BASENAME}/${BRANCH}"
