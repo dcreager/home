@@ -1,0 +1,3 @@
+BASENAME=pathogen
+URL=git://github.com/tpope/vim-pathogen.git
+BRANCH=master
