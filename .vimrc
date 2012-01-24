@@ -10,6 +10,7 @@ nmap <leader>in :set sw=4 sts=4 et<CR>
 set formatoptions+=n2
 set tw=72
 syntax enable
+filetype plugin indent on
 
 set list listchars=tab:··,trail:•
 
