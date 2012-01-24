@@ -1,0 +1,3 @@
+BASENAME=scss
+URL=git://github.com/cakebaker/scss-syntax.vim.git
+BRANCH=master
