@@ -9,6 +9,7 @@ nmap <leader>il :set sw=8 sts=8 noet<CR>
 nmap <leader>in :set sw=4 sts=4 et<CR>
 set formatoptions+=n2
 set tw=72
+set number
 syntax enable
 filetype plugin indent on
 
